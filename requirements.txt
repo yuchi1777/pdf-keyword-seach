@@ -1,5 +1,17 @@
+### ✅ 修正 requirements.txt
+# 確保所有需要的 Python 套件都正確
 langchain
 ollama
 llama-hub
 chromadb
 streamlit
+pypdf
+langchain-community
+
+### ✅ 設定 Python 版本，確保相容性
+# 這個設定檔應該放在 `.streamlit/config.toml`
+[server]
+headless = true
+
+[runtime]
+python_version = "3.10"
