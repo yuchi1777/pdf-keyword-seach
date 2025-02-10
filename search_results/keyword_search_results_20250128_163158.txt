@@ -1,0 +1,67 @@
+Keyword Search Results
+=====================
+
+Summary Statistics
+-----------------
+
+Atenolol:
+  Total occurrences: 1
+  Found on pages: 28
+
+Metoprolol:
+  Total occurrences: 1
+  Found on pages: 28
+
+PROPRANOLOL:
+  Total occurrences: 1
+  Found on pages: 28
+
+ROXADUSTAT:
+  Total occurrences: 1
+  Found on pages: 30
+
+Sodium:
+  Total occurrences: 3
+  Found on pages: 59
+
+
+Detailed Matches
+----------------
+
+Atenolol (Found 1 times):
+
+Match 1 (Page 28):
+...（[Atenolol]）、倍他洛爾（Betaxolol）、比索洛...
+--------------------------------------------------------------------------------
+
+Metoprolol (Found 1 times):
+
+Match 1 (Page 28):
+...（[Metoprolol]）、普萘洛爾（Propranolol）、噻...
+--------------------------------------------------------------------------------
+
+PROPRANOLOL (Found 1 times):
+
+Match 1 (Page 28):
+...（Metoprolol）、普萘洛爾（[PROPRANOLOL]）、噻...
+--------------------------------------------------------------------------------
+
+ROXADUSTAT (Found 1 times):
+
+Match 1 (Page 30):
+...涉及S2禁藥[ROXADUSTAT]，這種物質會增加血紅素...
+--------------------------------------------------------------------------------
+
+Sodium (Found 3 times):
+
+Match 1 (Page 59):
+...動含[Sodium] chloride 9 mg/mL成分注射液1500 ml...
+--------------------------------------------------------------------------------
+
+Match 2 (Page 59):
+...動含[Sodium] chloride 9 mg/mL成分注射液1500 ml...
+--------------------------------------------------------------------------------
+
+Match 3 (Page 59):
+...Saline ([Sodium] chloride 0.9%) 500mL」（健保...
+--------------------------------------------------------------------------------
