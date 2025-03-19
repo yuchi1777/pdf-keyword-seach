@@ -10,4 +10,5 @@ langchain-community
 pandas
 openpyxl
 pymupdf
+pdfplumber
 
