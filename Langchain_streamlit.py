@@ -1,10 +1,7 @@
-import os
-import pandas as pd
-import re
 import streamlit as st
 import tempfile
-import pdfplumber  # 使用 pdfplumber 解析 PDF
-from collections import defaultdict
+import fitz  # PyMuPDF
+import pandas as pd
 
 # Streamlit UI
 st.title("📄 PDF 關鍵字搜尋工具")
@@ -33,7 +30,7 @@ def load_keywords(file):
     return []
 
 def extract_text_from_pdf(uploaded_files):
-    """使用 pdfplumber 解析 PDF 並提取文字"""
+    """使用 PyMuPDF 解析 PDF 並提取文字"""
     documents = []
     
     for uploaded_file in uploaded_files:
@@ -46,15 +43,16 @@ def extract_text_from_pdf(uploaded_files):
                     tmp_file_path = tmp_file.name
                 
                 # 讀取 PDF 內容
-                with pdfplumber.open(tmp_file_path) as pdf:
-                    for page_num, page in enumerate(pdf.pages):
-                        text = page.extract_text() or ""  # 提取純文字，避免 NoneType 錯誤
-                        documents.append({
-                            "file": uploaded_file.name,
-                            "page": page_num + 1,
-                            "content": text
-                        })
+                doc = fitz.open(tmp_file_path)
+                for page_num, page in enumerate(doc):
+                    text = page.get_text("text") or ""  # 確保不為 None
+                    documents.append({
+                        "file": uploaded_file.name,
+                        "page": page_num + 1,
+                        "content": text
+                    })
                 
+                doc.close()
                 os.remove(tmp_file_path)  # 刪除臨時檔案
         
         except Exception as e:
