@@ -46,7 +46,9 @@ def extract_text_from_pdf(uploaded_files):
                 # 讀取 PDF 內容
                 doc = fitz.open(tmp_file_path)
                 for page_num, page in enumerate(doc):
-                    text = page.get_text("text") or ""  # 確保不為 None
+                    raw_text = page.get_text("text") or ""
+                    # 修正斷行：carboxy-\nmethylcellulose → carboxymethylcellulose
+                    text = raw_text.replace("-\n", "").replace("\n", " ")
                     documents.append({
                         "file": uploaded_file.name,
                         "page": page_num + 1,
